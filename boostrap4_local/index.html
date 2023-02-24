@@ -1,0 +1,57 @@
+<!--
+
+   Udemy - (Descargado) Mega Curso de Boostrap 4 de Cero a Maestro
+   
+   Temas:
+   1. Introducción
+        1-1. Qué es Bootstrap
+        1-2. Nuevas Funciones en Bootstrap 4
+        1-3. Instalación de Herramientas para el Curso
+        1-4. Instalación de Bootstrap en Local
+        1-5. Instalación de Bootstrap desde CDN
+
+-->
+
+<!--
+    ACLARACIONES:
+
+    1 - La etiqueta "shrink-to-fit=no" se utiliza apartir de la creacion de una web responsiva y es obligatoria de poner para poder dar un correcto formato de web partiendo desde moviles hasta pantallas mas grandes.
+    2 - Se recomienda en ese orden especificar las librerias JS. Además de antes de finalizar el body.
+    3 - Link de (Bootstrap v4.2.1) version usada en el práctico: https://getbootstrap.com/docs/4.2/getting-started/download/ (Compiled CSS and JS) 
+
+--> 
+
+
+
+<!DOCTYPE html>
+<html lang="es"> <!--Cambiamos de "en" a "es"-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--Cambiamos initial-scale=1.0 a =1 y agregamos shrink-to-fit=no (1)-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--ESTILOS BOOTSTRAP-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <title>Bootstrap en local</title>
+</head>
+<body>
+    
+    <div class="container">
+    <h1>Bienvenidos</h1>
+    <button class="btn btn-warning">Botón de prueba</button>
+    </div>
+
+
+
+    <!-- LOCAL JS: jQuery 1º | Popper.js 2º | Bootstrap 3º (2)-->
+
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
