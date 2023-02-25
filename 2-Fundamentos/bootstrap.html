@@ -1,0 +1,68 @@
+<!--
+
+   Udemy - (Descargado) Mega Curso de Boostrap 4 de Cero a Maestro
+   
+   Temas:
+   2. Fundamentos:
+        2-1. Que es un Framework y Porque Usarlo.
+        2-2. Unidades de Medida CSS Rem y Em.
+        2-3. Fundamentos de Flexbox.
+        2-4. Puntos de Quiebre Bootstrap 4.
+        2-5. Estilos Css Personalizados.
+
+-->
+
+<!--
+    ACLARACIONES:
+
+    1 - Este archivo es para compararlo con index.html tambien creado, aqui se aplica bootstrap, veremos la direfencia entre uno y otro pudiendo apreciar de gran manera las ventajas visuales y funcionales que tiene manejar que este Framework para nuestros desarrollos.
+
+    2 - ( mt-5 ) : Esta sintaxis indica a Bootstrap que el titulo en este caso, tenga 5 de margen (margin to), valores posibles de 1 a 5. No siendo asi necesario especificarlo en CSS mediante hoja de estilos aparte.
+
+    3 - ( btn-primary ) : Esta sintaxis para el boton le da un estilo y color que se añade con solo indicarlo en BS, siendo este "azul". Puede verse todo desde la pagina web Bootstrap (Utilities/Colors). Podemos escribir directamente (button.btn.btn-warning + TAB) y creará la sintaxis del boton + clase especifica de estilo directamente: 
+
+    4 - Regilla: Creamos dentro de los div las clases que tendran en su sintaxis las propiedades para adaptar sus filas y columnas a moviles y PC. Codif: div.color-md-12 (una fila con 2 columnas de 6, ya que hay otra igual de 6, y ambas sumas las 12 totales para "md" (tamaño medium)). Ahora le agregamos la misma propiedad en la misma definicion de cada columna pero para móviles "sm" (small) cambiando a 12 c/u.
+
+
+
+--> 
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <div class="container mt-5"> <!--BS: mt-5 (2)-->
+        <div class="row"> <!--div.row + TAB-->
+
+            <div class="col-sm-12 col-md-6"> <!--(4) 1º Rejilla-->
+                <h2>Titulo</h2>
+                <button class="btn btn-primary">BOTÓN</button><!--BS: btn-primary (3)-->
+            </div>
+
+            <div class="col-sm-12 col-md-6"> <!--(4) 2º Rejilla-->
+                <h2>Titulo</h2>
+                <button class="btn btn-primary">BOTÓN</button>
+            </div>
+        </div>
+
+
+        
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

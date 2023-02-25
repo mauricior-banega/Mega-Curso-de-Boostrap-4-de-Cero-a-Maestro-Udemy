@@ -1,0 +1,32 @@
+/*
+-En este archivo, que es css de "rem_em.html" explicaremos porque Bootstrap utiliza la unidad de medida "rem/em" y elimina "px" en su sintaxis.
+
+
+ACLARACION:
+
+1- Atajo: Para abrir Inspeccionar o Herramientas de desarrolador, hay que apretar F12.
+2 - Para seleccionar y comentarlo/desactivarlo: Seleccionamos y luego presionamos Shift + ALT + A.
+3 - En Pixeles (px) no es posible de adaptar el tamaño segun las especificaciones/cofig de nuestro navegador segun dispositivo que usemos o modificaciones de pequeño a grande manual desde Chrome por ejemplo, ya que este afecta al HTML directamentamente.
+  - En REM por distinto, es relativo el tamaño, es decir toma el valor indicado, donde para 1 rem = 16px pero si se edita el tamaño o si se abre desde distintos dispositivos este se ajustara automáticamente. Se dice que es multiplicador porque si se pone por ej 2 rem seria equivacalente a 32 px. 
+  - Y para EM  no es relativo al HTML, sino al elemento padre que lo contiene. Supongamos que para "p", ".caja" es padre, si padre no existiera, el tamaño de la fuente p valdria 1em=16px, pero como si esta definido a 10px, p vale 10px.
+
+*/
+
+html 
+{
+    /*font-size:14px;*/
+}
+
+.caja
+{
+    font-size: 10px;
+}
+
+p
+{   /*REM puede aplicarse a todos los elementos capacitivos, al igual que en px.*/
+    font-size: 1em;
+    border: 0.1em black solid; 
+    padding: 1em;
+
+}
+

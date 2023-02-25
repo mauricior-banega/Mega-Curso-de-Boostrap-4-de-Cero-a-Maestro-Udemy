@@ -1,0 +1,151 @@
+<!--
+-En este archivo index2.html esplicaremos como funcionan las propiedades de Boostrap en cuanto a las propiedas/fundamentos FlexBox.
+
+
+ACLARACION:
+
+1- 
+-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Fundamentos de Flexbox</title>
+
+    <!--La etiqueta @media (MediaQuery) la aplicamos para que aplique responsive ya que si achicamos el navegador las cajas no se superponen.-->
+	<style>
+
+    @media(min-width: 768px){
+        
+        .contenedor{
+
+            display:flex; /*1º Pasan de estar uno debajo del otro, a estar uno al lado del otro horizontalmente. La alineacion es en fila (row)*/
+            
+            /*align-items:flex-start :Las cajas del contenedor se ajustan en la parte superior.
+              align-items:flex-center :Las cajas del contenedor se ajustan en la parte central.
+              align-items:flex-stretch (por defecto) :Las cajas del contenedor se ajustan arriba/abajo emparejadamente todas, sin importar si una tiene mas texto o no, todas iguales*/
+
+            /*flex-direction: row; : Las cajas del contenedor se organizan en filas
+              flex-direction: column; : Las cajas del contenedor se organizan en columnas*/
+            
+        
+		}
+
+        .contenedor-2{
+         
+            display: flex;
+            justify-content: space-around;
+            /*justify-content: flex-start : Alinea las cajas a la izquiera por ello no veremos ningun cambio.
+             justify-content: flex-end :Alinea cajas a la derecha.
+             justify-content: center :Alinea cajas al medio justify-content: space-between:Alinea cajas pegada en los extremos izq y der y al centro, aprovechando espacios iguales entre cada elemento de la caja.
+             justify-content: space-around: Similar al anterior pero añade espacios tambien en los extremos izq/der. */
+        }
+
+        .content-caja{
+        
+            flex-basis: 25%; /*Antes era width:25% pero no es recomendable. Para ello usaremos "flex-basis" que hace lo mismo, referido al tamaño de los anchos.*/
+        }
+    }
+
+        .contenedor-3{
+         
+            display: flex;
+            flex-direction: row-reverse; /*Cambia el orden de las cajas.*/
+            
+            /*flex-wrap: wrap :Alinea las cajas debajo en caso de que con el tamaño definido no entren por el ancho.
+             flex-wrap: nowrap: No baja cajas, es decir no se ajusta sino que mantiene la estructura si se achicase la resolución.*/
+            
+        }
+		
+        /* Afecta: A los div contenidos en los contenedores 1, 2 y 3. */
+		.contenedor div, .contenedor-2 div, .contenedor-3 div{ 
+			border: 1px #ccc solid;
+			padding: 12px;
+			background: #FAFAFA;
+		}
+
+		.caja-1{
+            flex: 2; /*2º Veremos que flex indica cuantas columnas (de ancho) ocupan. Sera el mismo que caja-3 pero caja-2 ocupara el doble de ancho por el medio.*/
+            order: 2; /*3º*/
+		}
+
+		.caja-2{
+			flex: 4; /*2º*/
+            order: 3; /*3º*/
+		}
+
+		.caja-3{
+			flex: 2; /*2º*/
+            order: 1; /*3º Para darle orden de visualizacion, por ej para que este se vea primero que los otros 2 codificados antes, ponemos order:1 y para los otros order:2 y order:3 al ultimo.*/
+		}    
+
+        .content-caja-3{
+            flex-basis: 15%;
+        }    
+
+        
+	</style>
+</head>
+<body>
+
+	<div class="contenedor">
+		<div class="caja-1">
+			<h3>Caja uno</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, excepturi! consectetur adipisicing elit. Tenetur, excepturi!</p>
+		</div>
+		<div class="caja-2">
+			<h3>Caja dos</h3>
+			<p>Lorem ipsum dolor sit amet</p>
+		</div>
+		<div class="caja-3">
+			<h3>Caja tres</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, excepturi!</p>
+		</div>
+    </div>
+    
+    <div class="contenedor-2">
+		<div class="content-caja">
+			<h3>Caja 4</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, excepturi! consectetur adipisicing elit. Tenetur, excepturi!</p>
+		</div>
+		<div class="content-caja">
+			<h3>Caja 5</h3>
+			<p>Lorem ipsum dolor sit amet</p>
+		</div>
+		<div class="content-caja">
+			<h3>Caja 6</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, excepturi!</p>
+		</div>
+    </div>
+    
+    <div class="contenedor-3">
+            <div class="content-caja-3">
+                <h3>Caja 7</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, excepturi! consectetur adipisicing elit. Tenetur, excepturi!</p>
+            </div>
+            <div class="content-caja-3">
+                <h3>Caja 8</h3>
+                <p>Lorem ipsum dolor sit amet</p>
+            </div>
+            <div class="content-caja-3">
+                <h3>Caja 9</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, excepturi!</p>
+            </div>
+        
+        <div class="content-caja-3">
+                <h3>Caja 10</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, excepturi! consectetur adipisicing elit. Tenetur, excepturi!</p>
+            </div>
+            <div class="content-caja-3">
+                <h3>Caja 11</h3>
+                <p>Lorem ipsum dolor sit amet</p>
+            </div>
+            <div class="content-caja-3">
+                <h3>Caja 12</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, excepturi!</p>
+            </div>
+        </div>
+    </div>
+	
+</body>
+</html>
