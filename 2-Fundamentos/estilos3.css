@@ -1,0 +1,46 @@
+.btn-primary
+{
+    /*background: red;
+      border-color: red;
+
+      //De esta manera podemos darle estilo, cambiar de color como vemos al azul predefinido de esa clase "btn-primary". Para hacerlo editamos llamando a la clases y agregandole la propiedad que deseemos.
+
+      //Cambiamos de color a rojo; pero ahora cambiaremos de color a gradiente. Lo buscamos desde alguna web como: Gradiente CSS 
+
+    */
+
+    background-image: linear-gradient(
+        45deg,
+        hsl(240deg 100% 20%) 0%,
+        hsl(327deg 100% 35%) 49%,
+        hsl(55deg 100% 50%) 100%
+      );
+
+    border-color: black;
+
+}
+
+/*Este boton, tiene "hover", es decir cambia de color si se le pasa el mouse (evento onmouse). Por ello es que tambiene editamos eso*/
+
+.btn-primary:hover
+{
+    /*background: red;
+      border-color: red;
+
+      //De esta manera podemos darle estilo, cambiar de color como vemos al azul predefinido de esa clase "btn-primary". Para hacerlo editamos llamando a la clases y agregandole la propiedad que deseemos.
+
+      //Cambiamos de color a rojo; pero ahora cambiaremos de color a gradiente. Lo buscamos desde alguna web como: Gradiente CSS 
+
+    */
+
+    
+        background-image: linear-gradient(
+        225deg,
+        hsl(240deg 100% 20%) 0%,
+        hsl(327deg 100% 35%) 50%,
+        hsl(55deg 100% 50%) 100%
+        );
+
+        border-color: black;
+
+}

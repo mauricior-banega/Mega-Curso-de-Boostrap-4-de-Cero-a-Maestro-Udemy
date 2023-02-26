@@ -1,0 +1,79 @@
+/*Dispositivos pequeños: landscapes (telefonos)*/
+
+@media(min-width: 576px)
+{
+    body
+    {
+        background: yellow;
+    }
+}
+
+/*Dispositivos medianos (tablets)*/
+
+@media(min-width: 768px)
+{
+    body
+    {
+        background: blue;
+    }
+}
+
+/*Dispositivos grandes (PC o Notebook)*/
+
+@media(min-width: 992px)
+{
+    body
+    {
+        background: red;
+    }
+}
+
+/*Dispositivos extra grandes(PC o Notebook gran resolución o monitor grande)*/
+
+@media(min-width: 1200px)
+{
+    body
+    {
+        background: green;
+    }
+}
+
+/*Dispositivos extra pequeños*/
+
+@media(max-width: 575)
+{
+    body
+    {
+        background: black;
+    }
+}
+
+/*Dispositivos pequeños*/
+
+@media(max-width: 767px)
+{
+    body
+    {
+        background: rgb(221, 127, 127);
+    }
+}
+
+/*Dispositivos de tabletas medianas*/
+
+@media(max-width: 991px)
+{
+    body
+    {
+        background: rgb(127, 160, 221);
+    }
+}
+
+/*Dispositivos largos*/
+
+@media(max-width: 1199px)
+{
+    body
+    {
+        background: rgb(129, 117, 240);
+    }
+}
