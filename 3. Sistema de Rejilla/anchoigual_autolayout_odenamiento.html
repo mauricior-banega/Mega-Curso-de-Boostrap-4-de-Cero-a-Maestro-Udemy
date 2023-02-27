@@ -1,0 +1,131 @@
+<!--
+
+   Udemy - (Descargado) Mega Curso de Boostrap 4 de Cero a Maestro
+   
+   Temas:
+   3. Sistema de Rejilla
+        1-1. Rejilla Responsive
+        1-2. Ancho Igual, Multifila, Auto Layout y Ordenamiento
+        1-3. Compensado u Offset
+        1-4. Alineación de la Rejilla con Flexbox
+        1-5. Anidación de Rejilla
+
+-->
+
+<!--
+    -En este archivo "anchoigual_autolayout_odenamiento.html" veremos 
+
+    ACLARACIONES:
+
+    1-Crea un div al medio de los 4 (con width al %100 (class="w-100")), de esta maera lo que se logra es dividir los divs (2 arriba y 2 abajo) y el div del medio es quien divide la caja, en este caso aplica una raya negra al medio de los 4. Esto se llama "multi-row" o "milti-fila".
+    2-Lo que explica en ANCHO IGUAL MENOS EN SM es que los divs se mostraran uno a lado del otro, con la clase class="col-sm" menos en tamaño pequeño, pasan a verse uno debajo del otro, ahora cuando esten en class="col-md" se veran asi hasta que lleguen a tamaño mediano, luego pasaria lo mismo, se veria uno debajo de otro.
+    3-Se refiere a que si un div no tiene especificado el valor de columna pero los restantes si, automaticamente calculará su layout aun asi no este indicado, de manera que ocupe el valor de 12 que es el ancho total, osea el 100%. Por lo que el col que no esta definido tendra un valor de col = 3.
+    4-Lo que indica unicamente es que se conserva el valor para tamaños mayores a sm osea md/lg/xl mantiene el la misma cantidad de distribucion para sm y para todos los demas. De manera que si deseo que se apliqie la misma proporcion apra tamaños mayores no es necesario especificarlo.
+-->
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <!--Estilos personalizados-->
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <title>Curso de Bootstrap 4</title>
+  </head>
+  <body>
+
+    <!--Rejilla responsive-->
+   <div class="container">
+     <!--ANCHO IGUAL-->
+     <div class="row">
+        <div class="col" style="border:1px solid #000; background: #fafafa;">ANCHO IGUAL</div>
+        <div class="col" style="border:1px solid #000; background: #fafafa;">ANCHO IGUAL</div>
+        <div class="col"  style="border:1px solid #000; background: #fafafa;">ANCHO IGUAL</div>
+        <div class="col"  style="border:1px solid #000; background: #fafafa;">ANCHO IGUAL</div>
+      </div>
+
+      <br>
+      <!--ANCHO IGUAL MULTILÍNEA-->
+      <div class="row">
+          <div class="col" style="border:1px solid #000; background: #fafafa;">ANCHO IGUAL</div>
+          <div class="col" style="border:1px solid #000; background: #fafafa;">ANCHO IGUAL</div>
+          <!--(1)-->
+          <div class="w-100" style="border:1px solid #000; background: #fafafa;"></div>
+          <div class="col"  style="border:1px solid #000; background: #fafafa;">ANCHO IGUAL</div>
+          <div class="col"  style="border:1px solid #000; background: #fafafa;">ANCHO IGUAL</div>
+      </div>
+
+      <br><br>
+
+        <!--ANCHO IGUAL MENOS EN SM (2)-->
+      <div class="row">
+          <div class="col-md" style="border:1px solid #000; background: #fafafa;">ANCHO IGUAL MENOS EN SM</div>
+          <div class="col-md" style="border:1px solid #000; background: #fafafa;">ANCHO IGUAL MENOS EN SM</div>
+          <div class="col-md" style="border:1px solid #000; background: #fafafa;">ANCHO IGUAL MENOS EN SM</div>
+        </div>
+
+      <br><br>
+
+        <!--AUTO LAYOUT (3)-->
+      <div class="row">
+            <div class="col" style="border:1px solid #000; background: #fafafa;">ANCHO IGUAL MENOS EN SM</div>
+            <div class="col-6" style="border:1px solid #000; background: #fafafa;">ANCHO IGUAL MENOS EN SM</div>
+            <div class="col-3" style="border:1px solid #000; background: #fafafa;">ANCHO IGUAL MENOS EN SM</div>
+      </div>
+
+      <br><br>
+
+          <!--ORDENAMIENTO-->
+      <div class="row">
+            <div class="col order-3" style="border:1px solid #000; background: #fafafa;">PRIMER DIV</div>
+            <div class="col order-2" style="border:1px solid #000; background: #fafafa;">SEGUNDO DIV</div>
+            <div class="col order-1" style="border:1px solid #000; background: #fafafa;">TERCER DIV</div>
+      </div>
+
+          <br><br>
+
+          <!--DESDE PANTALLA (4)-->
+      <div class="row">
+            <div class="col-sm-6" style="border:1px solid #000; background: #fafafa;">PRIMER DIV</div>
+            <div class="col-sm-4" style="border:1px solid #000; background: #fafafa;">SEGUNDO DIV</div>
+            <div class="col-sm-2" style="border:1px solid #000; background: #fafafa;">TERCER DIV</div>
+      </div>
+
+      <br><br>
+
+      <!--ACLARACION: TENER EN CUENTA QUE COL-MD-6 ES EL TAMAÑO QUE OCUPARA EL DIV, PERO NO TIENE UNA UBICACION ESPECIFICA, SOLO SABEMOS QUE ES EL 50% DEL TOTAL DEL ANCHO/NAVEGADOR, AHORA PARA "UBICARLO" LE ESPECIFICAMOS MEDIANTE "OFFSET" CUANTAS COLUMNAS A LA DERECHA SE UBICARÁ. EL OBJETO DE ESTE ES UBICAR LAS CAJAS UNIFORMEMENTE MEDIANTE EL COMPENSADO. -->
+
+           <!--COMPENSADO, OFFSET:offset-md-3
+        :Aplica en centrado al div en cuestion. -->
+      <div class="row">
+            <div class="col-md-6 offset-md-3" style="border:1px solid #000; background: #fafafa;">col-md-6 offset-md-3</div>
+      </div>
+
+           <!--COMPENSADO, OFFSET:offset-md-4
+        :Como vemos el 1º div no tiene offset pero si el 2º, y es offset-md-4; esto aplica un espacio al medio de los 2 divs centrando cada div a un extremo de igual distancia entre uno y otro. -->
+      <div class="row">
+              <div class="col-md-4" style="border:1px solid #000; background: #fafafa;">col-md-4</div>
+              <div class="col-md-4 offset-md-4" style="border:1px solid #000; background: #fafafa;">col-md-4 offset-md-4</div>
+      </div>
+
+            <!--COMPENSADO, OFFSET-->
+      <div class="row">
+              <div class="col-md-3 offset-md-3" style="border:1px solid #000; background: #fafafa;">col-md-3 offset-md-3</div>
+              <div class="col-md-3 offset-md-3" style="border:1px solid #000; background: #fafafa;">col-md-3 offset-md-3</div>
+      </div>
+    </div>
+   
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

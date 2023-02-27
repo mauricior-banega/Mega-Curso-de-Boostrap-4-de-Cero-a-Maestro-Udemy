@@ -1,0 +1,77 @@
+<!--
+
+   Udemy - (Descargado) Mega Curso de Boostrap 4 de Cero a Maestro
+   
+   Temas:
+   3. Sistema de Rejilla
+        1-1. Rejilla Responsive
+        1-2. Ancho Igual, Multifila, Auto Layout y Ordenamiento
+        1-3. Compensado u Offset
+        1-4. Alineación de la Rejilla con Flexbox
+        1-5. Anidación de Rejilla
+
+-->
+
+<!--
+    -En este archivo "rejilla_responsive" veremos como se aplican las clases de Boostrap de manera de crear una web responsiva usandolos y visualizando los cambis en el documento al modificarlos.
+
+    ACLARACIONES:
+
+    -Recomendaciones para el uso de regillas y demas clases reservadas de uso CS en la web en Documentation/Grid.
+
+    1 - Referido al div principal o padre, se recomienda usar la clase "container". O "container-fluid" para que ocupe un %100 del ancho el archivo.
+    2 - Recordamos que un archivo contiene un sistema de regillas de 12 columnas, donde se alojaran en filas (por defecto) los elementos que creemos (hasta que le indiquemos lo contrario si queremos). Cada fila tiene con respecto al documento un padding llamado "gutter" tanto al la izq como der. A las filas las sentenciamos mediante (.row) y dentro de ellas las columnas.
+    3 - En la pagina, en Grid options podremos ver como podemos distribuir las columnas segun tamaño, la sentencia es: .col-/.col-sm/.col-md/.col-lg./.col-xl.
+    4 - Lo que ingresamos en los divs que contienen a los li directamente son, las propiedades de tamaño en ancho osea las columnas que ocuparan. Digamos para pantallas chicas (.col-sm-6), significa que ocupara 6 columnas chicas. Ahora (.col-lg-9) coupara 9 porque justamente es mas grande, y seguimos la logica.
+    Por otro lado el style que esta ahi metido es para dar estilo a la caja de los li, fondo, borde, color etc para ver mas claramente los cambios de los ejemplos sobre estos.
+    5 - Similar hacemos con la otra caja contenedora de li, pero sucede que como dijimos en un archivo entran 12 columnas, por ello si a la primer caja de dimos valores "col-sm-6 col-md-8 col-lg-9 col-xl-10" en la segunda tenemos que darle lo que nos queda de lugar para que entre. Osea para la segunda caja, para .col.sm le damos 12-6=6, osea el restante de c/u.
+    6 - Para tamaños inferiores a 576 px, osea de menor tamaño de pantallas chicas, veremos en la web que si achicamos mas se cargan una debajo de la otra ya que no hay manera de mantener la configuracion dada antes por tema de espacios.
+-->
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <!--Estilos personalizados-->
+    <link rel="stylesheet" href="estilos.css">
+
+    <title>Curso de Bootstrap 4</title>
+  </head>
+  <body>
+
+    <!--Rejilla responsive (1)-->
+   <div class="container"> <!--Automaticamente se centran las 2 cajas contenedores de li-->
+      <div class="row"> <!--Automaticamente se acomodan horizontalmente, sactiva nuestro display:flex -> "flex-box"-->
+        <div class="col-sm-6 col-md-8 col-lg-9 col-xl-10" style="border:1px solid #000; background: #fafafa;"> <!--(4)-->
+          <ul>
+            <li>6 columnas en sm</li> <!--Emmet: li*4 + TAB-->
+            <li>8 columnas en md</li>
+            <li>9 columnas en lg</li>
+            <li>10 columnas en xl</li>
+          </ul>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2" style="border:1px solid #000; background: #fafafa;"> <!--(5)-->
+            <ul>
+                <li>6 columnas en sm</li>
+                <li>4 columnas en md</li>
+                <li>3 columnas en lg</li>
+                <li>2 columnas en xl</li>
+              </ul>
+        </div>
+      </div>
+    </div>
+   
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
