@@ -1,0 +1,183 @@
+<!--
+
+   Udemy - (Descargado) Mega Curso de Boostrap 4 de Cero a Maestro
+   
+   Temas:
+   4. Flexbox en Bootstrap
+        4-1. Clases de Flexbox en Bootstrap
+        4-2. Auto Margen y Envolvente (Wrap)
+
+-->
+
+<!--
+    -En este archivo "clases_flexbox veremos como actua el flexbox pero definido no mediante "row" sino especificando "d-flex" y "flex-row" aplicado para ubicar las cajas divs organizadas respecto al la fila  y para las columnas "flex-column" y  "align-items" solo para columnas. Entre otras declaraciones que aplicamos para cada tipo.
+
+    ACLARACIONES:
+
+    1 - 
+-->
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <!--Estilos personalizados-->
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Curso de Bootstrap 4</title>
+    <style>
+        .estiloFila{
+            height: 220px;
+            background: #FAFAFA;
+        }
+
+        .estiloColumna{
+            border: 1px solid #000;
+        }
+    </style>
+  </head>
+  <body>
+
+    <div class="container">
+        <div class="d-flex flex-row estiloFila">
+            <div class="p-4 estiloColumna">Caja Flexbox</div>
+            <div class="p-4 estiloColumna">Caja Flexbox</div>
+            <div class="p-4 estiloColumna">Caja Flexbox</div>
+        </div>
+
+        <br><br>
+
+        <div class="d-flex flex-row-reverse estiloFila">
+                <div class="p-4 estiloColumna">Caja Flexbox</div>
+                <div class="p-4 estiloColumna">Caja Flexbox</div>
+                <div class="p-4 estiloColumna">Caja Flexbox</div>
+        </div>
+
+        <br><br>
+
+        <div class="d-flex justify-content-start estiloFila">
+                <div class="p-4 estiloColumna">Caja Flexbox</div>
+                <div class="p-4 estiloColumna">Caja Flexbox</div>
+                <div class="p-4 estiloColumna">Caja Flexbox</div>
+        </div>
+
+        <br><br>
+
+        <div class="d-flex justify-content-center estiloFila">
+                <div class="p-4 estiloColumna">Caja Flexbox</div>
+                <div class="p-4 estiloColumna">Caja Flexbox</div>
+                <div class="p-4 estiloColumna">Caja Flexbox</div>
+        </div>
+
+        <br><br>
+
+        <div class="d-flex justify-content-end estiloFila">
+                <div class="p-4 estiloColumna">Caja Flexbox</div>
+                <div class="p-4 estiloColumna">Caja Flexbox</div>
+                <div class="p-4 estiloColumna">Caja Flexbox</div>
+        </div>
+
+        <br><br>
+
+        <div class="d-flex justify-content-around estiloFila">
+                <div class="p-4 estiloColumna">Caja Flexbox</div>
+                <div class="p-4 estiloColumna">Caja Flexbox</div>
+                <div class="p-4 estiloColumna">Caja Flexbox</div>
+        </div>
+
+        <br><br>
+
+        <div class="d-flex justify-content-between estiloFila">
+                <div class="p-4 estiloColumna">Caja Flexbox</div>
+                <div class="p-4 estiloColumna">Caja Flexbox</div>
+                <div class="p-4 estiloColumna">Caja Flexbox</div>
+        </div>
+
+        <br><br>
+
+        <div class="d-flex flex-column estiloFila">
+                <div class="p-4 estiloColumna">Caja Flexbox</div>
+                <div class="p-4 estiloColumna">Caja Flexbox</div>
+                <div class="p-4 estiloColumna">Caja Flexbox</div>
+        </div>
+
+        <br><br>
+
+        <div class="d-flex flex-column-reverse estiloFila">
+                <div class="p-4 estiloColumna">Caja Flexbox</div>
+                <div class="p-4 estiloColumna">Caja Flexbox</div>
+                <div class="p-4 estiloColumna">Caja Flexbox</div>
+        </div>
+
+        <br><br>
+
+        <div class="d-flex align-items-start estiloFila">
+                <div class="p-4 estiloColumna">Caja Flexbox</div>
+                <div class="p-4 estiloColumna">Caja Flexbox</div>
+                <div class="p-4 estiloColumna">Caja Flexbox</div>
+        </div>
+
+
+        <br><br>
+
+        <div class="d-flex align-items-center estiloFila">
+                <div class="p-4 estiloColumna">Caja Flexbox</div>
+                <div class="p-4 estiloColumna">Caja Flexbox</div>
+                <div class="p-4 estiloColumna">Caja Flexbox</div>
+        </div>
+
+        <br><br>
+
+        <div class="d-flex align-items-end estiloFila">
+                <div class="p-4 estiloColumna">Caja Flexbox</div>
+                <div class="p-4 estiloColumna">Caja Flexbox</div>
+                <div class="p-4 estiloColumna">Caja Flexbox</div>
+        </div>
+
+        <br><br>
+
+        <div class="d-flex align-items-baseline estiloFila">
+                <div class="p-4 estiloColumna">Caja Flexbox</div>
+                <div class="p-4 estiloColumna">Caja Flexbox</div>
+                <div class="p-4 estiloColumna">Caja Flexbox</div>
+        </div>
+
+
+        <br><br>
+
+        <div class="d-flex align-items-strech estiloFila">
+                <div class="p-4 estiloColumna">Caja Flexbox</div>
+                <div class="p-4 estiloColumna">Caja Flexbox</div>
+                <div class="p-4 estiloColumna">Caja Flexbox</div>
+        </div>
+
+        <br><br>
+
+        <div class="d-flex estiloFila">
+                <div class="align-self-start p-4 estiloColumna">Caja Flexbox</div>
+                <div class="align-self-center p-4 estiloColumna">Caja Flexbox</div>
+                <div class="align-self-end p-4 estiloColumna">Caja Flexbox</div>
+                <div class="align-self-baseline p-4 estiloColumna">Caja Flexbox</div>
+                <div class="align-self-stretch p-4 estiloColumna">Caja Flexbox</div>
+        </div>
+
+        <br><br>
+        
+    </div>
+
+
+    
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

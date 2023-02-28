@@ -1,0 +1,114 @@
+<!--
+
+   Udemy - (Descargado) Mega Curso de Boostrap 4 de Cero a Maestro
+   
+   Temas:
+   4. Flexbox en Bootstrap
+        4-1. Clases de Flexbox en Bootstrap
+        4-2. Auto Margen y Envolvente (Wrap)
+
+-->
+
+<!--
+    -En este archivo "envolvente_automargen.html" veremos como actuan los margenes.
+
+    ACLARACIONES:
+
+    1 - mr-auto : Hace que las demas cajas se muevan a la derencha, menos la que tiene la sentencia. Esta se aplica a filas.
+    2 - ml-auto : Hace que las demas cajas se muevan a la izquierda, menos la que tiene la sentencia. Esta se aplica a filas.
+    3 - mb-auto : Hace que las demas cajas se muevan hacia abajo, menos la que tiene la sentencia. Esta se aplica a columnas.
+    3 - mt-auto : Hace que las demas cajas se muevan hacia arriba, menos la que tiene la sentencia. Esta se aplica a columnas.
+    4 - flex-wrap : Hace que todas las cajas esten una al ladod e la otra, pero cuando exceden el ancho pasan debajo en fila nuevamente. Esta se aplica a filas.
+    % - flex-nowrap : No esta en el ejemplo pero hace lo contrario al de arriba, es decir no apila sino que pone una al ladod e la otra y si excede el ancho aplica un "scroll" o barra deslizadora para mostrarlas todas.
+-->
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <!--Estilos personalizados-->
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Curso de Bootstrap 4</title>
+    <style>
+        .estiloFila{
+            height: 220px;
+            background: #FAFAFA;
+        }
+
+        .estiloColumna{
+            border: 1px solid #000;
+        }
+    </style>
+  </head>
+  <body>
+
+  <div class="container">
+      <div class="d-flex flex-row estiloFila">
+          <div class="p-3 mr-auto estiloColumna">Caja Flexbox</div> <!--(1)-->
+          <div class="p-3 estiloColumna">Caja Flexbox</div>
+          <div class="p-3 estiloColumna">Caja Flexbox</div>
+      </div>
+
+      <div class="d-flex flex-row estiloFila">
+        <div class="p-3 estiloColumna">Caja Flexbox</div>
+        <div class="p-3 estiloColumna">Caja Flexbox</div>
+        <div class="p-3 ml-auto estiloColumna">Caja Flexbox</div> <!--(2)-->
+    </div>
+
+    <div class="d-flex flex-column estiloFila">
+      <div class="p-3 mb-auto estiloColumna">Caja Flexbox</div> <!--(3)-->
+      <div class="p-3 estiloColumna">Caja Flexbox</div>
+      <div class="p-3 estiloColumna">Caja Flexbox</div>
+    </div>
+    
+    <br><br>
+
+    <div class="d-flex flex-column estiloFila">
+      <div class="p-3 estiloColumna">Caja Flexbox</div>
+      <div class="p-3 estiloColumna">Caja Flexbox</div>
+      <div class="p-3 mt-auto estiloColumna">Caja Flexbox</div>
+    </div>
+
+    <!--Envolvente o wrap-->
+    <br><br>
+
+    <div class="d-flex flex-wrap estiloFila">
+      <div class="p-3 estiloColumna">Caja Flexbox</div>
+      <div class="p-3 estiloColumna">Caja Flexbox</div>
+      <div class="p-3 estiloColumna">Caja Flexbox</div>
+      <div class="p-3 estiloColumna">Caja Flexbox</div>
+      <div class="p-3 estiloColumna">Caja Flexbox</div>
+      <div class="p-3 estiloColumna">Caja Flexbox</div>
+      <div class="p-3 estiloColumna">Caja Flexbox</div>
+      <div class="p-3 estiloColumna">Caja Flexbox</div>
+      <div class="p-3 estiloColumna">Caja Flexbox</div>
+      <div class="p-3 estiloColumna">Caja Flexbox</div>
+      <div class="p-3 estiloColumna">Caja Flexbox</div>
+      <div class="p-3 estiloColumna">Caja Flexbox</div>
+      <div class="p-3 estiloColumna">Caja Flexbox</div>
+      <div class="p-3 estiloColumna">Caja Flexbox</div>
+      <div class="p-3 estiloColumna">Caja Flexbox</div>
+    </div>
+
+    <br><br>
+
+  </div>
+
+  
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
