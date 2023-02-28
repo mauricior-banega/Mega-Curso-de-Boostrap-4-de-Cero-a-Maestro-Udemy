@@ -1,0 +1,154 @@
+
+<!--
+
+   Udemy - (Descargado) Mega Curso de Boostrap 4 de Cero a Maestro
+   
+   Temas:
+   5. Tipografía
+        1. Encabezados y Tipografía
+        2. Alineación de Texto y Display
+        3. Iconos de Font Awesome
+
+
+-->
+
+<!--
+    -En este archivo "tipografia.html" veremos como actuan los cambios de fuente y tamaños entre otras propiedades que afectan a la tipografia de una archivo con BS aplicado.
+
+    ACLARACIONES:
+
+    1 - Asigna al titulo del tipo h6 la clase h2,de esta manera aunque tenga originalmente la clase de parrafo chico tendra la del tamaño de un h2, mas grande.
+    2 - Es una clase para los titulos (h1/h2/h3, etc) y es un cambio en la fuente y de tamaño, distinto al de un h común.
+    3 - DATO (Emmet): Si escribimos "Lorem30" o 50 /el valor que queramos, se creara un texto Lorem automaticamente con la cantidad de palabras que le pasemos. Asi crearemos mas rapido los ejemplos con este tipo de texto. 
+    4 - Clase "lead", aplicada al párrafo; lo que realiza es un cambio en la fuente (mas finita) y en el tamaño (mas grande).
+    5 - Clase "text-monospace", aplicada al párrafo; cambio de fuente y tamaño, similar a como el estilo de fuente de maquina de escribir.
+    6 - Asignando a un párrafo la clase "text-truncate" realiza un corte de contenido de acuerdo al tamaño del navegador, osea visualmente siempre se vera un reglón de ese texto en pantalla.
+    7 - Clase "list-inline" (debe estar definido tanto en el ul y tambien en cada li, agregando lo mismo mas item, osea "list-inline-item") ;aplica un cambio visual en el que se muestran los elementos de la lista, en este caso uno al lado del otro, en vez de arriba hacia abajo como es por defecto.
+
+    ACLARACION: 
+    -Para los efectos que sean breves de explicar se indicara en el mismo código.
+    -DATO (Emmet/VSC): Para escribir lo mismo en varios elementos por ejemplo (una misma clase en varios li) deberemos de apretar TAB + ALT y clickear todos los elementos uno a uno a donde se va a aplicar la escritura. Al finalizar ENTER.
+
+
+-->
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <!--Estilos personalizados-->
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <title>Curso de Bootstrap 4 - Tipografía</title>
+  </head>
+  <body>
+
+    <div class="container">
+        <!--ENCABEZADOS-->
+        <h1>Encabezado 1</h1>
+        <h2>Encabezado 2</h2>
+        <h3>Encabezado 3</h3>
+        <h4>Encabezado 4</h4>
+        <h5>Encabezado 5</h5>
+        <h6 class="h2">Encabezado 6</h6> <!--(1)-->
+
+        <br>
+         <!--DISPLAY (2) -->
+         <h1 class="display-1">Display 1</h1> 
+         <h1 class="display-2">Display 2</h1>
+         <h1 class="display-3">Display 3</h1>
+         <h1 class="display-4">Display 4</h1>
+
+         <br>
+         <!--PARRAFOS (3)-->
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, animi beatae consequatur odio quod laboriosam doloribus? Ea magnam officia laboriosam et excepturi sequi, accusantium quia deserunt debitis? Porro, repudiandae quam?</p>
+
+        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, animi beatae consequatur odio quod laboriosam doloribus? Ea magnam officia laboriosam et excepturi sequi, accusantium quia deserunt debitis? Porro, repudiandae quam?</p> <!--(4)-->
+
+        <p class="text-monospace">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, animi beatae consequatur odio quod laboriosam doloribus? Ea magnam officia laboriosam et excepturi sequi, accusantium quia deserunt debitis? Porro, repudiandae quam?</p> <!--(5)-->
+
+
+
+        <br>
+         <!--ESTILOS DE FUENTE-->
+         <p class="font-weight-bold">RENDER2WEB</p> <!--Efecto negrita-->
+         <p><span style="font-weight:bold; ">RENDER2WEB</span></p> <!--Efecto negrita dentro de un span, queda igual-->
+         <p class="font-weight-normal">render2web</p> <!--Efecto normal al por defecto para los párrafos-->
+         <p class="font-italic">render2web</p><!--Efecto Italica-->
+
+
+
+         <br>
+         <!--TRANSFORMACION DE TEXTO-->
+         <p class="text-lowercase">RENDER2WEB</p> <!--Texto cambiado a minúscula-->      
+         <p class="text-uppercase">render2web</p> <!--Texto cambiado a mayúscula-->
+         <p class="text-capitalize">render2web</p> <!--Texto cambiado a mayúscula la primera letra, y las demás min.-->
+
+
+         <br>
+         <!--CITAS O BLOCKQUOTES: Declaraciones de la gente o el autor-->
+         <blockquote class="blockquote"> <!--Aplica un estilo típico de las citas web.-->
+             <p>Esta es una cita</p>
+         </blockquote>
+
+         <br>
+         <!--CITAS O BLOCKQUOTES ALINEADA A LA DERECHA-->
+         <blockquote class="blockquote text-right">
+             <p>Esta es una cita</p>
+         </blockquote>
+
+         <br>
+         <!--CITAS O BLOCKQUOTES ALINEADA A LA DERECHA CON PIE DE PÁGINA-->
+         <blockquote class="blockquote text-right">
+             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere nemo vel, quam eos saepe amet.</p>
+             <footer class="blockquote-footer">
+                 Pie de página cita <cite title="Titulo ejemplo">Titulo Ejemplo</cite>
+             </footer>
+         </blockquote>
+
+
+         <br>
+         <!--TRUNCAR TEXTO (6)-->
+         <p class="text-trunceba">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, repebaenderit inventore? Quisquam sed velit quia eveniet natus eum nulla beateba Dicta quasi consectetur sed! Corporis architecto explicabo molestias,ebare sit tenetur accusamus nisi, numquam fuga nobis at expedita nemo neque,ebasam illo facilis magnam eum vel officiis veritatis? Perferendis qui repeebat iure veniam aliquid ratione corrupti dolorum non consequatur est?</p>eba
+
+        
+
+         <br>
+
+         <!--LISTAS-->
+         <ul class="list-unstebad">
+      <!--ul class="list-unstyled" :Le quita el (.) a los elementos de la li-->
+             <li>Texto de prueba</li>
+             <li>Texto de prueba</li>
+             <li>Texto de prueba</li>
+             <li>Texto de prueba</li>
+             <li>Texto de prueba</li>
+         </ul>
+
+         <br>
+          <!--LISTA EN LÍNEA-->
+         <ul class="list-inline"> <!--7()-->
+                <li class="list-inline-item">Texto de prueba</li>
+                <li class="list-inline-item">Texto de prueba</li>
+                <li class="list-inline-item">Texto de prueba</li>
+                <li class="list-inline-item">Texto de prueba</li>
+                <li class="list-inline-item">Texto de prueba</li>
+        </ul>
+
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
