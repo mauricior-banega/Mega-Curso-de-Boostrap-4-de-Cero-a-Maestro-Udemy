@@ -1,0 +1,109 @@
+
+<!--
+   Udemy - (Descargado) Mega Curso de Boostrap 4 de Cero a Maestro
+   
+   Temas:
+   7. Componentes CSS
+
+        1. Introducción a la Sección (es solo video sin codificacion)
+        2. Botones Parte 1
+        3. Botones Parte 2
+        4. Navbars (Barras de Navegación)
+        5. Formularios y Campos de Entrada
+        6. Grupos de Entradas (Inputs)
+        7. Alertas (Alerts)
+        8. Barras de Progreso
+        9. Grupos de Listas (List Groups)
+        10. Insignias (Badges) y Migajas de Pan (Breadcrumbs)
+        11. Tablas
+        12. Paginacion
+        13. Tarjetas Parte1
+        14. Tarjetas Parte 2
+        15. Jumbotron
+-->
+
+<!--
+    -En este archivo "alertas.html" veremos como justamente crear alertas en BS.
+    
+    ACLARACIONES:
+
+    - En el practico no muestra video sobre la creacion de este archivo pero lo contiene asique quedará registrado en Gitgub.
+
+    1 - Para crear un Alert del cual podamos tocar en la X y cerrarlo. Se crea mediante las clases "alert-dismissible" del div y en el button (data-dismiss="alert").
+
+-->
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <title>Componentes CSS - Alertas</title>
+  </head>
+  <body>
+
+    <div class="container">
+
+      <div class="alert alert-primary">
+          <p>Alert Primary</p>
+      </div>
+
+      <div class="alert alert-secondary">
+            <p>Alert secondary</p>
+      </div>
+
+       <div class="alert alert-danger">
+             <p>Alert Danger</p>
+       </div>
+
+       <div class="alert alert-success">
+            <p>Alert Success</p>
+      </div>
+
+      <div class="alert alert-info">
+            <p>Alert Info</p>
+      </div>
+
+      <div class="alert alert-warning">
+            <p>Alert Warning</p>
+      </div>
+
+      <div class="alert alert-light">
+            <p>Alert alert-light</p>
+      </div>
+
+      <div class="alert alert-dark">
+            <p>Alert Dark</p>
+      </div>
+
+      <!--Alert Dismissible (1)-->
+      <div class="alert alert-info alert-dismissible">
+          <button class="close" type="button" data-dismiss="alert">
+              <span>&times</span>
+          </button>
+          <strong>Dismissible</strong>Entrada ingresada
+      </div>
+
+
+      <div class="alert alert-success">
+          <h4 class="alert-heading">Bienvenidos</h4>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam excepturi voluptate earum voluptatibus possimus error est repellat, a magnam eaque.</p>
+          <hr>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, quas.</p>
+      </div>
+      
+    </div>
+    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
