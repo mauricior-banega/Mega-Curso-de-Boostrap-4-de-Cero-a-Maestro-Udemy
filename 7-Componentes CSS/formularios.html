@@ -1,0 +1,146 @@
+
+<!--
+   Udemy - (Descargado) Mega Curso de Boostrap 4 de Cero a Maestro
+   
+   Temas:
+   7. Componentes CSS
+
+        1. Introducción a la Sección (es solo video sin codificacion)
+        2. Botones Parte 1
+        3. Botones Parte 2
+        4. Navbars (Barras de Navegación)
+        5. Formularios y Campos de Entrada
+        6. Grupos de Entradas (Inputs)
+        7. Alertas (Alerts)
+        8. Barras de Progreso
+        9. Grupos de Listas (List Groups)
+        10. Insignias (Badges) y Migajas de Pan (Breadcrumbs)
+        11. Tablas
+        12. Paginacion
+        13. Tarjetas Parte1
+        14. Tarjetas Parte 2
+        15. Jumbotron
+-->
+
+<!--
+    -En este archivo "formularios.html" veremos como podemos crear justamente formularios en distintos tamaños y estilos.
+    
+    ACLARACIONES:
+
+    1 - 
+
+-->
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Componentes CSS - Formularios</title>
+  </head>
+  <body>
+
+    <div class="container">
+      <!--CAMPOS TIPO TEXTO-->
+      <div class="row mt-5">
+            <form>
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" class="form-control"  placeholder="Ingresa tu nombre">
+                </div>
+
+                <!--email-->
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" placeholder="Ingresa tu email">
+                    <small class="form-text text-muted">Este email es valido</small>
+                </div>
+
+                <!--campo de texto small-->
+                <div class="form-group">
+                        <label for="nombre">Nombre small</label>
+                        <input type="text" class="form-control form-control-sm"  placeholder="Ingresa tu nombre">
+                </div>
+
+                <!--campo de texto large-->
+                <div class="form-group">
+                        <label for="nombre">Nombre small</label>
+                        <input type="text" class="form-control form-control-lg"  placeholder="Ingresa tu nombre">
+                </div>
+
+                <!--campo de password-->
+                <div class="form-group">
+                    <label for="contrasenia">Contraseña</label>
+                    <input type="password" class="form-control" placeholder="Ingresa tu contraseña">
+                </div>
+
+                 <!--campo tipo select-->
+                 <div class="form-group">
+                     <label for="genero">Genero</label>
+                     <select id="genero" class="form-control">
+                         <option>Masculino</option>
+                         <option>Femenino</option>
+                     </select>
+                 </div>
+
+                  <!--campo tipo textarea-->
+                  <div class="form-group">
+                      <label for="mensaje">Mensaje</label>
+                      <textarea id="mensaje" class="form-control" rows="5"></textarea>
+                  </div>
+
+                   <!--campo tipo subida archivo-->
+                   <div class="form-group">
+                       <label for="archivo">Subir Archivo</label>
+                        <input type="file" id="archivo" class="form-control-file">
+                        <small class="form-text text-muted">Máximo 2mb</small>
+                    </div>
+
+                    <!--campo tipo subida archivo personalizado-->
+                   <div class="custom-file">
+                         <input type="file" id="archivo" class="custom-file-input">  
+                         <label class="custom-file-label" for="archivo">Subir Archivo</label>                       
+                     </div>
+                     <br><br>
+                     <!--campo tipo rango-->
+                     <div class="form-group">
+                         <label for="membresia">Membresia Oro</label>
+                         <input type="range" class="custom-range" min="2" max="10" value="3">
+                     </div>
+
+                     <!--boton-->
+                     <br>
+                     <button class="btn btn-primary btn-block" type="submit">Enviar</button>
+                     <br /><br />
+            </form>
+           
+             <!--Formulario en línea-->
+             <form class="form-inline">
+                    <input type="text" class="form-control mr-2" placeholder="Ingresa usuario">
+                    <input type="password" class="form-control mr-2" placeholder="Ingresa contraseña">
+                    <div class="form-check">
+                        <label class="form-check-label mr-2">
+                            <input type="checkbox" class="form-check-input">Recordar contraseña
+                        </label>
+                    </div>
+                   <button class="btn btn-success" type="submit">Ingresar</button>
+               </form>
+
+              
+
+        </div>
+    </div>
+    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
