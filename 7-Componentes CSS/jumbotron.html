@@ -1,0 +1,84 @@
+
+<!--
+   Udemy - (Descargado) Mega Curso de Boostrap 4 de Cero a Maestro
+   
+   Temas:
+   7. Componentes CSS
+
+        1. Introducción a la Sección (es solo video sin codificacion)
+        2. Botones Parte 1
+        3. Botones Parte 2
+        4. Navbars (Barras de Navegación)
+        5. Formularios y Campos de Entrada
+        6. Grupos de Entradas (Inputs)
+        7. Alertas (Alerts)
+        8. Barras de Progreso
+        9. Grupos de Listas (List Groups)
+        10. Insignias (Badges) y Migajas de Pan (Breadcrumbs)
+        11. Tablas
+        12. Paginacion
+        13. Tarjetas Parte1
+        14. Tarjetas Parte 2
+        15. Jumbotron
+-->
+
+<!--
+    -Archivo "jumbotron.html"
+    ACLARACIONES:
+
+    Que es un jumbotron? : n jumbotron indica un cuadro gris grande para llamar la atención adicional sobre algún contenido o información especial. 
+
+    1 - "display-4": Para que se muestre del tamaño de un titulo pero mas grande que el estandard h1.
+
+    2 - Para crear el 2do jumbotron, se hace similar pero en el div inicial pondremos las clases de jumbotron (jumbotron jumbotron-fluid) y dentro del otro div contenido de este el "container".
+    
+-->
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <title>Componentes CSS - Jumbotron</title>
+  </head>
+  <body>
+
+    <div class="container mt-5 text-center">
+        <div class="jumbotron">
+            <!--1-->
+            <h1 class="display-4">Bienvenidos</h1>
+            <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius blanditiis vel incidunt porro iusto velit?</p>
+            <!--
+                lead: Letra mas ligth y grande.
+                hr: Linea horizontal
+            -->
+            <hr>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis veritatis repudiandae quidem delectus. Fuga temporibus modi quisquam odit similique reprehenderit!</p>
+            <a href="#" class="btn btn-primary btn-lg">Ver más</a>
+        </div>
+        
+    </div>
+
+    <!-- 2 --> 
+    <div class="jumbotron jumbotron-fluid text-center">
+        <div class="container">
+                <h1 class="display-4">Bienvenidos</h1>
+                <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius blanditiis vel incidunt porro iusto velit?</p>
+                <a href="#" class="btn btn-primary btn-lg">Ver más</a>
+        </div>
+    </div>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
