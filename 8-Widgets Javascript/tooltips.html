@@ -1,0 +1,73 @@
+
+<!--
+   Udemy - (Descargado) Mega Curso de Boostrap 4 de Cero a Maestro
+   
+   Temas:
+   8. Widgets Javascript
+
+        1. Introducción a la sección(es solo video sin codificacion)
+        2. Tooltips
+        3. Carrusel (Slider)
+        4. Colapsable y Acordeón
+        5. Ventanas Emergentes (Popover)
+        6. Ventanas Modales
+        7. Scrolls (Scroll spy y Scroll Suavizado)
+-->
+
+<!--
+    -Archivo "tooltips.html". Es aquel mensaje mostrado apartir de un boton, donde al clickear o pasar el mouse muestra un aviso o mensaje indicando alguna informacion complementaria. 
+    
+    ACLARACIONES:
+    1 - Para crearlo un tooltip, ademas de la sentencia en el body como haremos con cada ejemplo, deberemos de traer la funcion de jQuery (JS) a nuestro documento mediante la sentencia que alli aparece para que funcione.
+
+    2 - Se refiere a mostrar un mensaje visualmente distinto al de los tooltips ejemplificados, es decir, con formato HTML dentro. Haciendo de ese mensaje mas personalizado/distinto. Se hace añadiendo al button, data-html="true"; y dentro del title agregamos el HTML en su estructura, en este caso un titulo+párrafo.
+    
+-->
+<!doctype html>
+<html lang="es">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
+
+    <script src="https://kit.fontawesome.com/0f48d8c00d.js"></script>
+
+    <title>Tooltips Bootstrap</title>
+  </head>
+  <body>
+
+    <div class="container mt-5">
+
+        <button class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Tooltip en la parte de arriba">Botón Tooltip Arriba</button>
+
+        <button class="btn btn-warning" data-toggle="tooltip" data-placement="bottom" title="Tooltip en la parte de abajo">Botón Tooltip Abajo</button>
+
+        <button class="btn btn-warning" data-toggle="tooltip" data-placement="left" title="Tooltip en la izquierda">Botón Tooltip Izquierda</button>
+
+        <button class="btn btn-warning" data-toggle="tooltip" data-placement="right" title="Tooltip en la derecha">Botón Tooltip Derecha</button>
+        <br>
+        <br>
+
+
+        <!--Tooltip con html (2)-->
+        <button class="btn btn-success" data-toggle="tooltip" data-html="true" data-placement="top" title="<h2>Titulo en H2</h2><p>Texto tooltip en párrafo</p>">Botón Tooltip Arriba</button>
+
+
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+
+  <script>
+      //Inicializar Tooltips (1)
+      $('[data-toggle="tooltip"]').tooltip();
+  </script>
+
+</html>
